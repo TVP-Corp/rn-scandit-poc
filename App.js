@@ -20,7 +20,7 @@ const App: () => Node = () => {
     <SafeAreaView style={{backgroundColor: Colors.lighter}}>
       <StatusBar barStyle={'dark-content'} />
       <DataCaptureView
-        style={{flex: 1}}
+        style={{height: '100%', width: '100%'}}
         context={dataCaptureContext}
         ref={viewRef}
       />

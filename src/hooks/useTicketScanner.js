@@ -1,6 +1,6 @@
 // @flow
 import {useRef, useEffect, useState} from 'react';
-import {Platform, AppState, BackHandler} from 'react-native';
+import {AppState, BackHandler} from 'react-native';
 import {
   BarcodeCapture,
   BarcodeCaptureOverlay,
