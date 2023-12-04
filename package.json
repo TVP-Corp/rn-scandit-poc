@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android:apk": "cd android && ./gradlew app:assembleRelease && cd ../",
     "clean": "yarn clean:android && yarn clean:javascript",
     "clean:android": "cd android && ./gradlew clean && cd ../",
     "clean:javascript": "watchman watch-del-all && rm -rf node_modules && rm -rf $TMPDIR/react-* && rm -rf $TMPDIR/haste-* && rm -rf $TMPDIR/metro-*",
