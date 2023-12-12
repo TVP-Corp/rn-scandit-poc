@@ -24,7 +24,9 @@ import {
 import {requestCameraPermissionsIfNeeded} from '../utils/permissions/camera-permission-handler';
 
 export default function useTicketScanner() {
+  const [barcodeViewStr, setBarcodeViewStr] = useState(null);
   const viewRef = useRef<DataCaptureView>(null);
+  const BARCODE_CHARS_TO_CHECK = 30;
 
   const dataCaptureContext =
     DataCaptureContext.forLicenseKey(/*reserved_for_key*/);
@@ -93,7 +95,9 @@ export default function useTicketScanner() {
           symbology,
         };
 
-        // dispatch action for scannedOutcome
+        const barcodeStr = scannedOutcome.data;
+        const croppedBarcode = barcodeStr.substr(0, BARCODE_CHARS_TO_CHECK);
+        setBarcodeViewStr(croppedBarcode);
       },
     };
 
@@ -148,5 +152,5 @@ export default function useTicketScanner() {
     }
   }, [isBarcodeCaptureEnabled]);
 
-  return {dataCaptureContext, viewRef};
+  return {dataCaptureContext, viewRef, barcodeViewStr};
 }
