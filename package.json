@@ -15,8 +15,8 @@
     "jetifier": "1.6.6",
     "react": "18.0.0",
     "react-native": "0.69.10",
-    "scandit-react-native-datacapture-barcode": "6.18.2",
-    "scandit-react-native-datacapture-core": "6.18.2"
+    "scandit-react-native-datacapture-barcode": "6.21.0",
+    "scandit-react-native-datacapture-core": "6.21.0"
   },
   "devDependencies": {
     "@babel/core": "7.12.9",

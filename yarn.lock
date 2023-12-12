@@ -2998,6 +2998,11 @@ event-target-shim@^5.0.0, event-target-shim@^5.0.1:
   resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
   integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
+eventemitter3@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-5.0.1.tgz#53f5ffd0a492ac800721bb42c66b841de96423c4"
+  integrity sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==
+
 exec-sh@^0.3.2:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.3.6.tgz#ff264f9e325519a60cb5e273692943483cca63bc"
@@ -6231,17 +6236,35 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-scandit-react-native-datacapture-barcode@6.18.2:
-  version "6.18.2"
-  resolved "https://registry.yarnpkg.com/scandit-react-native-datacapture-barcode/-/scandit-react-native-datacapture-barcode-6.18.2.tgz#95a50ac1bd19252b2dc86ad1ad458a8b58179fce"
-  integrity sha512-+LZkug29kz7stvBZ+ceWEgQkaQPFdj8HuQLjQEM/OE0h89C2AfxfflGQWnO1YsEKNX0t4H0mueWHfLUs3OoM3Q==
+scandit-datacapture-frameworks-barcode@6.21.0:
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/scandit-datacapture-frameworks-barcode/-/scandit-datacapture-frameworks-barcode-6.21.0.tgz#b2426288f7b6b73a1d5fcc0b584e696b519738b2"
+  integrity sha512-YWjxOWd5wRGsNT7J9wTAvw2GbuZyhWRiVmOQ5Q+BQ/mJ22AVz+oIyJAgo9DdhgbqoLIGmh1rZuMdThU5bXomAw==
   dependencies:
-    scandit-react-native-datacapture-core "6.18.2"
+    scandit-datacapture-frameworks-core "6.21.0"
 
-scandit-react-native-datacapture-core@6.18.2:
-  version "6.18.2"
-  resolved "https://registry.yarnpkg.com/scandit-react-native-datacapture-core/-/scandit-react-native-datacapture-core-6.18.2.tgz#615ab0a514ba7368013c84f2d1e6189d4d9e7402"
-  integrity sha512-p37E/+i7tfsTU4A/1maZVgej0fR/U6Xt3oC6NjUN4SvhT9OtTHWM4U8KMkwIKA9pYX+XgLGnPx+FXh6bjxPl3w==
+scandit-datacapture-frameworks-core@6.21.0:
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/scandit-datacapture-frameworks-core/-/scandit-datacapture-frameworks-core-6.21.0.tgz#153268e67650b6a3473be4ffcd04c36023382400"
+  integrity sha512-1z5ivEh2hn2r1lKfMBiNfRxKn8ErLXNJwim685+xYOzVY68mX/nkWyj5FwmCzWX0iBtUZNbgMmBciY5yNRrH0Q==
+  dependencies:
+    eventemitter3 "5.0.1"
+
+scandit-react-native-datacapture-barcode@6.21.0:
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/scandit-react-native-datacapture-barcode/-/scandit-react-native-datacapture-barcode-6.21.0.tgz#5adfb8745a903102e387117d6ddf5cb0c3ae7334"
+  integrity sha512-EM7r/BSJQtRZ9kLCQF8RgRGl8p8zypLe223VbPRRvhgzh6yAukbbpyoityaBLnHLSZYILYB494pp8+qoPW6Luw==
+  dependencies:
+    scandit-datacapture-frameworks-barcode "6.21.0"
+    scandit-datacapture-frameworks-core "6.21.0"
+    scandit-react-native-datacapture-core "6.21.0"
+
+scandit-react-native-datacapture-core@6.21.0:
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/scandit-react-native-datacapture-core/-/scandit-react-native-datacapture-core-6.21.0.tgz#4622bbae9b7b79dfa4bb075dc10a78e39fb2875b"
+  integrity sha512-Tldugk+NfkknyFxmBDiwHFNdHt5S6tWEX6PTvywU6iub/ohpZg/60pdhzb4Gtj2TB7jHg+sJiV47v1HmN0lvYA==
+  dependencies:
+    scandit-datacapture-frameworks-core "6.21.0"
 
 scheduler@^0.21.0:
   version "0.21.0"
